@@ -1,0 +1,5 @@
+ // Rapport creation chemin //
+
+erreure creation chemin : voir fichier about.log
+            pour plus de details ! 
+-----------------------------

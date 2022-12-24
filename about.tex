@@ -1,0 +1,123 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+
+\title{Pyhack : A new strategic game }
+\author{Nathan Daunois}
+\date{20/12/19}
+
+\pdfinfo{%
+  /Title    (pyhack)
+  /Author   (Nathan DAUNOIS)
+  /Creator  (Nathan DAUNOIS)
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+
+
+ 
+ \begin{enumerate}
+\item Introduction  
+\item Principe du jeu
+\item Les commandes
+\item Monstres et objets
+\item Calculs score
+ \end{enumerate}
+
+\newpage 
+
+\section{Le jeu}
+\subsection{Introduction}
+
+Le jeu Pyhack est inspiré des graphismes du jeu Nethack , avec cependant des modifications au niveau du fonctionnement du jeu.
+
+Le joueur doit survivre le plus longtemps possible , il commence dans une salle puis doit passer dans l'étage superieur .
+le nombre de salle augmente petit à petit ainsi que la difficulté des monstres et à certains niveaux , des Monstres spéciaux 
+apparaissent ainsi que des Boss !! 
+
+Les 10 meilleurs scores sont répertoriés dans la partie ``Bests players'' du menus ! 
+A vous de jouer et .... Bonne chance ! :)
+
+\subsection{Les commandes }
+
+\subparagraph{Dans le menus du jeu :}
+
+ Dans le menus , il faut sse deplacer avec $2$ et $8$ pour aller respectivement vers le haut et le bas.
+ On valide avec la touche enter .
+ 
+\subparagraph{Dans le jeu :}
+Dans le jeu , il y a plus de commandes :
+\begin{itemize}
+ \item Se deplacer (en ligne droite)  : fleches directionnelles
+ \item Se deplacer (en diagonale) :7 (haut gauche) , 9 (haut droit),1 (bas gauche) , 3 (bas droit)
+ \item enlever/mettre les stats : e
+ \item attaquer (contact du monstre) : c
+ \item attaquer (distance) : d
+ \item quitter : q
+\end{itemize}
+
+\subparagraph{Dans le ``champ vision attaque distance'' :}
+\begin{itemize}
+ \item se deplacer : 8 : haut , 4 : gauche , 6 : droite , 2 : bas 
+ \item attaquer la cible : d
+ \item quitter : q
+\end{itemize}
+
+
+\newpage
+
+\section{Monstres et objets}
+
+\subsection{Monstres}
+
+\subparagraph{Les types de monstres}
+sont diverse , on a les sbires (lettres de a a z) en orange , puis en rouge , puis en noir , difficulté croissante 
+celons la lettre et aussi la couleur ! \\
+Certains monstres sont spéciaux , comme par exemple le $\frac{1}{2}$ qui enlève la moitié de la vie au joueur donc attention !
+
+\subparagraph{Les boss apparaissent tous les 5 niveaux}
+ils sont plus fort que les autres monstres mais rapportent beaucoup d'xp mais attaquent au contact et 
+a distance !
+
+\subsection{objets}
+
+Les objets ont des fonctionnalités diverse :
+
+\begin{itemize}
+ \item le $\textcolor{green}{+}$ : ajoute de la vie
+ \item le $\textcolor{green}{=}$ : remet la vie au max
+ \item le $\textcolor{red}{?}$ : ajoute (ou enleve ! ) un nombre aléatoire de pv 
+ \item le $\textcolor{green}{!}$ : ajoute un nombre aléatoire de pv
+ \item le $\textcolor{black}{\%}$ : augmente l'attaque de 1
+ \item le $\textcolor{blue}{[]}$ : augmente l'armure de 2
+ \item le $\textcolor{blue}{()}$ : idem mais de 1
+ \item le $\textdollar$ : fait apparaitre les escaliers  dans un salle aléatoirement!
+ \item le \# : les fameux escaliers : fait passer au niveau suivant (impossible de revenir en arrière ! ) 
+\end{itemize}
+
+
+Les montres enlevent une quatité de vie au joueur en fonction de son armure (NB : les monstres spèciaux ne tiennent pas 
+compter de l'armure ! )
+
+\subsection{Calcul du score}
+
+Le score est calculé de la manière suivante : 
+
+$$ \varphi = xp_{joueur} + niveau_{jeu}^{2} + niveau_{joueur}^{3} $$
+
+
+
+
+\end{document}
